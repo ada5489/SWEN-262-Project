@@ -73,5 +73,15 @@ public class Itinerary implements FlightInterface{
     return str;
   }
 
+  /**
+   * If the itinerary objects share the same flightnumbers the itinerary's are equal
+   * more suited to check to see if reservations or something simmilar is the same
+   * @param itinerary itinerary to be checked
+   * @return
+   */
+  public boolean equals(Itinerary itinerary){
+    return getFlightNumber().equals(itinerary.getFlightNumber());
+  }
+
 
 }

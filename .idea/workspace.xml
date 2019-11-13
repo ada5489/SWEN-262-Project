@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8101aee6-af54-4c7b-b4dd-404279a60ad9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Model/Itinerary.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Model/Reservation.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Itinerary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Itinerary.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -35,28 +35,35 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Model/Flight.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="76" lean-forward="true" selection-start-line="28" selection-start-column="2" selection-end-line="76" />
+            <state relative-caret-position="1088">
+              <caret line="76" selection-start-line="28" selection-start-column="2" selection-end-line="76" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Model/Itinerary.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="487">
+              <caret line="82" column="65" lean-forward="true" selection-start-line="82" selection-start-column="65" selection-end-line="82" selection-end-column="65" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Model/Itinerary.java">
+        <entry file="file://$PROJECT_DIR$/src/Model/Reservation.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1224">
-              <caret line="72" column="15" selection-start-line="72" selection-start-column="15" selection-end-line="72" selection-end-column="15" />
+            <state relative-caret-position="433">
+              <caret line="47" column="88" selection-start-line="47" selection-start-column="88" selection-end-line="47" selection-end-column="88" />
               <folding>
-                <element signature="e#265#266#0" expanded="true" />
-                <element signature="e#296#297#0" expanded="true" />
-                <element signature="e#620#621#0" expanded="true" />
-                <element signature="e#643#644#0" expanded="true" />
-                <element signature="e#479#480#0" expanded="true" />
-                <element signature="e#509#510#0" expanded="true" />
-                <element signature="e#1191#1192#0" expanded="true" />
-                <element signature="e#1214#1215#0" expanded="true" />
-                <element signature="e#1373#1374#0" expanded="true" />
-                <element signature="e#1419#1420#0" expanded="true" />
+                <element signature="e#544#545#0" expanded="true" />
+                <element signature="e#570#571#0" expanded="true" />
+                <element signature="e#707#708#0" expanded="true" />
+                <element signature="e#737#738#0" expanded="true" />
+                <element signature="e#838#839#0" expanded="true" />
+                <element signature="e#876#877#0" expanded="true" />
+                <element signature="e#969#970#0" expanded="true" />
+                <element signature="e#1013#1014#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -86,6 +93,7 @@
         <option value="$PROJECT_DIR$/src/Model/FlightInterface.java" />
         <option value="$PROJECT_DIR$/src/Model/Flight.java" />
         <option value="$PROJECT_DIR$/src/Model/Itinerary.java" />
+        <option value="$PROJECT_DIR$/src/Model/Reservation.java" />
       </list>
     </option>
   </component>
@@ -99,8 +107,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -128,12 +134,14 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1573602626461" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1573666352971" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -196,7 +204,14 @@
       <option name="project" value="LOCAL" />
       <updated>1573601398818</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Completed the itinerary class for the model">
+      <created>1573602694957</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1573602694957</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -221,10 +236,11 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" sideWeight="0.49895614" visible="true" weight="0.33298096" />
+      <window_info anchor="bottom" id="Version Control" order="8" sideWeight="0.49895614" weight="0.33298096" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Terminal" order="10" />
-      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50104386" side_tool="true" visible="true" weight="0.33298096" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50104386" side_tool="true" visible="true" weight="0.32980973" />
+      <window_info anchor="bottom" id="Messages" order="12" sideWeight="0.49895614" visible="true" weight="0.32980973" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -244,18 +260,19 @@
     <MESSAGE value="Initial Project Commit" />
     <MESSAGE value="Added the source code package and a makeshift main class" />
     <MESSAGE value="Added the data files and began work on the model layer based on our design doc" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added the data files and began work on the model layer based on our design doc" />
+    <MESSAGE value="Completed the itinerary class for the model" />
+    <option name="LAST_COMMIT_MESSAGE" value="Completed the itinerary class for the model" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="44" selection-start-line="2" selection-start-column="44" selection-end-line="2" selection-end-column="44" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Model/FlightInterface.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -266,26 +283,31 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Model/Flight.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="76" lean-forward="true" selection-start-line="28" selection-start-column="2" selection-end-line="76" />
+        <state relative-caret-position="1088">
+          <caret line="76" selection-start-line="28" selection-start-column="2" selection-end-line="76" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Model/Itinerary.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1224">
-          <caret line="72" column="15" selection-start-line="72" selection-start-column="15" selection-end-line="72" selection-end-column="15" />
+        <state relative-caret-position="487">
+          <caret line="82" column="65" lean-forward="true" selection-start-line="82" selection-start-column="65" selection-end-line="82" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Model/Reservation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="433">
+          <caret line="47" column="88" selection-start-line="47" selection-start-column="88" selection-end-line="47" selection-end-column="88" />
           <folding>
-            <element signature="e#265#266#0" expanded="true" />
-            <element signature="e#296#297#0" expanded="true" />
-            <element signature="e#620#621#0" expanded="true" />
-            <element signature="e#643#644#0" expanded="true" />
-            <element signature="e#479#480#0" expanded="true" />
-            <element signature="e#509#510#0" expanded="true" />
-            <element signature="e#1191#1192#0" expanded="true" />
-            <element signature="e#1214#1215#0" expanded="true" />
-            <element signature="e#1373#1374#0" expanded="true" />
-            <element signature="e#1419#1420#0" expanded="true" />
+            <element signature="e#544#545#0" expanded="true" />
+            <element signature="e#570#571#0" expanded="true" />
+            <element signature="e#707#708#0" expanded="true" />
+            <element signature="e#737#738#0" expanded="true" />
+            <element signature="e#838#839#0" expanded="true" />
+            <element signature="e#876#877#0" expanded="true" />
+            <element signature="e#969#970#0" expanded="true" />
+            <element signature="e#1013#1014#0" expanded="true" />
           </folding>
         </state>
       </provider>
