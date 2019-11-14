@@ -17,8 +17,8 @@ public class Flight implements FlightInterface {
    * @param destination the destination airport code
    * @param flightNumber the unique key that recognizes it as a flight
    */
-  public Flight (int airfare, String arrivalTime, String departureTime, String origin, String destination, String flightNumber){
-  this.airfare = airfare;
+  public Flight (String airfare, String arrivalTime, String departureTime, String origin, String destination, String flightNumber){
+  this.airfare = Integer.parseInt(airfare);
   this.arrivalTime = arrivalTime;
   this.departureTime = departureTime;
   this.origin = origin;

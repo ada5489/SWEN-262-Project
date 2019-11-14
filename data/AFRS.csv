@@ -1,0 +1,15 @@
+Airports
+Airport Code|Airport Name|DelayTime|ConnectionTime|Weather
+ORD|Chicago|30|90|[windy,45][rain,50][sunny,80]
+PHX|Phoenix|20|45|[sunny,90][sunny,95][sunny,100][sunny,110][sunny,80]
+LAX|Los Angeles|45|90|[sunny,80][sunny,85][sunny,90][rain,65]
+BOS|Boston|30|45|[partly cloudy,70][partly cloudy,75][cloudy,80]
+IAD|Washington DC|60|60|[sunny,85][rain,85][clear,85][partly cloudy,85][cloudy,85]
+JFK|New York City|30|60|[cloudy,85][partly cloudy,40]
+SEA|Seattle-Tacoma|20|30|[cloudy,70][cloudy,75][cloudy,65]
+DFW|Dallas-Fort Wroth|45|30|[sunny,90][rain,50][partly sunny,60]
+MCO|Orlando|15|20|[cloudy,90][sunny,95][cloudy,90][rain,90]
+ATL|Atlanta|15|60|[sunny,95][rain,100]
+PIT|Pittsburgh|0|20|
+SFO|San Francisco|30|60|[sunny,55][partly cloudy,60]
+LAS|Las Vegas|0|20|[sunny,105]
