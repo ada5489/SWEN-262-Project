@@ -6,12 +6,12 @@ import Model.Itinerary;
  * Adds a flight reservation is subject to change name.
  * adds a flight to a persons itinerary
  */
-public class AddFlightReservationRequest implements Request {
+public class FlightAddRequest implements Request {
 
   private String passenger;
   private Itinerary itin;
 
-  public AddFlightReservationRequest(){
+  public FlightAddRequest(){
     //todo
   }
 
