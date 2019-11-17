@@ -14,8 +14,8 @@ public class Client {
 //        CSVReader.read_text("data/DelayTimes.txt");
 //        CSVReader.read_text("data/flights.txt");
 //        CSVReader.read_text("data/weather.txt");
-//        CSVReader.writeCsv();
         CSVReader.readCsv();
+        CSVReader.writeCsv();
 
 
     }
