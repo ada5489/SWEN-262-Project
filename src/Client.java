@@ -9,15 +9,18 @@ public class Client {
     }
 
     private static void startDatabase() throws IOException {
-        CSVReader.read_text("data/airportnames.txt");
-        CSVReader.read_text("data/connections.txt");
-        CSVReader.read_text("data/DelayTimes.txt");
-        CSVReader.read_text("data/flights.txt");
-        CSVReader.read_text("data/weather.txt");
+//        CSVReader.read_text("data/airportnames.txt");
+//        CSVReader.read_text("data/connections.txt");
+//        CSVReader.read_text("data/DelayTimes.txt");
+//        CSVReader.read_text("data/flights.txt");
+//        CSVReader.read_text("data/weather.txt");
+//        CSVReader.writeCsv();
+        CSVReader.readCsv();
+
+
     }
 
     public static void main(String[] args) throws IOException {
         startDatabase();
-        CSVReader.writeCsv();
     }
 }

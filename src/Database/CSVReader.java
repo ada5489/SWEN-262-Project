@@ -2,28 +2,24 @@ package Database;
 
 import Model.Airport;
 import Model.Flight;
-
 import java.io.*;
+import java.util.Arrays;
 import java.util.List;
+import java.util.Scanner;
 
 
 public class CSVReader {
     private static AirportDatabase aDB = new AirportDatabase();
-    private static FileWriter csvWriter;
-
-    static {
-        try {
-            csvWriter = new FileWriter("data/AFRS.csv");
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-
-    private  FileReader csvReader = new FileReader("data/AFRS.csv");
     private static FlightDatabase fDB = new FlightDatabase();
-
-    public CSVReader() throws IOException {
-    }
+//    private static FileWriter csvWriter;
+//
+//    static {
+//        try {
+//            csvWriter = new FileWriter("data/AFRS.csv");
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
+//    }
 
     public static void read_text(String filename) throws IOException {
         String[] line;
@@ -34,7 +30,7 @@ public class CSVReader {
             switch (filename)
             {
                 case "data/airportnames.txt":
-                    aDB.AddData(new Airport(line[1],line[0]));
+                    aDB.AddData(new Airport(line[0],line[1]));
                     break;
                 case "data/connections.txt":
                     aDB.setConnection(line[0],line[1]);
@@ -43,7 +39,7 @@ public class CSVReader {
                     aDB.setDelay(line[0],line[1]);
                     break;
                 case "data/flights.txt":
-                    fDB.AddFlight(new Flight(line[5],line[3],line[2],line[0],line[1],line[4]));
+                    fDB.AddFlight(new Flight(line[4],line[0],line[1],line[2],line[3],line[5]));
                     break;
                 case "data/weather.txt":
                     String airportcode = line[0];
@@ -59,38 +55,92 @@ public class CSVReader {
         }
     }
 
-    public static void start()
-    {
+    public static void readCsv() throws IOException {
+        Scanner csvReader = new Scanner(new FileReader("data/AFRS.csv"));
+        String l = csvReader.nextLine();
+        String[] line = l.split("/");
+        switch (line[0])
+        {
+            case "Airport Code":
+                line = csvReader.nextLine().split("/");
+                while(line.length != 0)
+                {
+                    if (!line[0].equals("") && !line[0].equals("Flight Number")) {
+                        if (line.length < 5) {
+                            aDB.AddData(new Airport(line[0], line[1], line[2], line[3], ""));
+                        }
+                        else
+                        {
+                            aDB.AddData(new Airport(line[0], line[1], line[2], line[3], line[4]));
+                        }
+                    }
+                    if(line[0].equals("Flight Number"))
+                    {
+                        break;
+                    }
+                    line = csvReader.nextLine().split("/");
+                }
 
-    }
-
-    private void readCsv()
-    {
-
+            case "Flight Number":
+                line = csvReader.nextLine().split("/");
+                while(csvReader.hasNext()) {
+                    if (line[1] != null && !line[0].isEmpty()) {
+                        fDB.AddFlight(new Flight(line[0], line[1], line[2], line[3], line[4], line[5]));
+                    }
+                    line = csvReader.nextLine().split("/");
+                }
+                break;
+        }
+        System.out.println("Completed");
     }
 
     public static void writeCsv() throws IOException
     {
-        csvWriter.append("Airports\n");
-        csvWriter.append("Airport Code");
-        csvWriter.append("|");
-        csvWriter.append("Airport Name");
-        csvWriter.append("|");
-        csvWriter.append("DelayTime");
-        csvWriter.append("|");
-        csvWriter.append("ConnectionTime");
-        csvWriter.append("|");
-        csvWriter.append("Weather");
-        csvWriter.append("\n");
+        FileWriter csvWriter = new FileWriter("data/AFRS.csv");
 
-        for (List<String> rowData : aDB.ToString())
+        csvWriter.write("Airport Code");
+        csvWriter.write("/");
+        csvWriter.write("Airport Name");
+        csvWriter.write("/");
+        csvWriter.write("DelayTime");
+        csvWriter.write("/");
+        csvWriter.write("ConnectionTime");
+        csvWriter.write("/");
+        csvWriter.write("Weather");
+        csvWriter.write("\n");
+
+        for (List <String> rowDt : aDB.ToString())
         {
-            csvWriter.append(String.join("|", rowData));
-            csvWriter.append("\n");
+            csvWriter.write(String.join("/", rowDt));
+            csvWriter.write("\n");
+        }
+
+        csvWriter.write("\n");
+        csvWriter.write("\n");
+        csvWriter.write("\n");
+        csvWriter.write("Flight Number");
+        csvWriter.write("/");
+        csvWriter.write("Origin");
+        csvWriter.write("/");
+        csvWriter.write("Destination");
+        csvWriter.write("/");
+        csvWriter.write("Departure Time");
+        csvWriter.write("/");
+        csvWriter.write("Arrival Time");
+        csvWriter.write("/");
+        csvWriter.write("Airfare");
+
+        csvWriter.write("\n");
+
+        for (List <String> rowDt : fDB.ToList())
+        {
+            csvWriter.write(String.join("/", rowDt));
+            csvWriter.write("\n");
         }
 
         csvWriter.flush();
         csvWriter.close();
+
     }
 
 }

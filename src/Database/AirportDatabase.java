@@ -6,15 +6,12 @@ import java.util.HashMap;
 import java.util.List;
 
 public class AirportDatabase {
+
     HashMap<String,Airport> airpotsDb;
 
     public AirportDatabase()
     {
         airpotsDb = new HashMap <>();
-    }
-
-    public Airport GetData(Airport airport) {
-        return null;
     }
 
     public void setConnection(String airportcode, String time) {
@@ -30,13 +27,8 @@ public class AirportDatabase {
         airpotsDb.get(airportcode).addWeather(wName,temp);
     }
 
-
     public void AddData(Airport airport) {
          airpotsDb.put(airport.getAirportcode(), airport);
-    }
-
-    public Airport DeleteData(Airport airport) {
-        return null;
     }
 
     public List<List<String>> ToString() {
@@ -45,7 +37,11 @@ public class AirportDatabase {
         {
             rows.add(airport.toArray());
         }
-
         return rows;
+    }
+
+    public void clear()
+    {
+        airpotsDb = new HashMap <>();
     }
 }

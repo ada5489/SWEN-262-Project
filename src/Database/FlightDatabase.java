@@ -4,8 +4,11 @@ package Database;
 import Model.Flight;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
 
 public class FlightDatabase {
+
     ArrayList <Flight> flightsDb;
 
     public FlightDatabase()
@@ -27,5 +30,19 @@ public class FlightDatabase {
 
     public Flight DeleteData(Flight flight) {
         return null;
+    }
+
+    public List<List <String>> ToList() {
+        List <List<String>> rows = new ArrayList <>();
+        for (Flight flight : flightsDb)
+        {
+            rows.add(flight.toArray());
+        }
+        return rows;
+    }
+
+    public void clear()
+    {
+        flightsDb = new ArrayList <>();
     }
 }

@@ -1,5 +1,8 @@
 package Model;
 
+import java.util.Arrays;
+import java.util.List;
+
 public class Flight implements FlightInterface {
   private int airfare;
   private String arrivalTime;
@@ -17,7 +20,7 @@ public class Flight implements FlightInterface {
    * @param destination the destination airport code
    * @param flightNumber the unique key that recognizes it as a flight
    */
-  public Flight (String airfare, String arrivalTime, String departureTime, String origin, String destination, String flightNumber){
+  public Flight (String flightNumber, String origin, String destination, String departureTime, String arrivalTime, String airfare){
   this.airfare = Integer.parseInt(airfare);
   this.arrivalTime = arrivalTime;
   this.departureTime = departureTime;
@@ -72,6 +75,12 @@ public class Flight implements FlightInterface {
    */
   public String getFlightNumber(){
     return flightNumber;
+  }
+
+  public List<String> toArray()
+  {
+    String[] strs = {flightNumber, origin, destination, departureTime, arrivalTime, String.valueOf(airfare)};
+    return Arrays.asList(strs);
   }
 
 
