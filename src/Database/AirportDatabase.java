@@ -40,8 +40,4 @@ public class AirportDatabase {
         return rows;
     }
 
-    public void clear()
-    {
-        airportsDb = new HashMap <>();
-    }
 }
