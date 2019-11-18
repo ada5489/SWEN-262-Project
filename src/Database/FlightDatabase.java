@@ -11,6 +11,8 @@ public class FlightDatabase {
 
     ArrayList <Flight> flightsDb;
 
+
+
     public FlightDatabase()
     {
         flightsDb = new ArrayList <>();
@@ -40,6 +42,7 @@ public class FlightDatabase {
         }
         return rows;
     }
+
 
     public void clear()
     {
