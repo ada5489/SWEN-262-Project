@@ -11,6 +11,8 @@ public class FlightDatabase {
 
     HashMap <String, Flight> flightsDb;
 
+
+
     public FlightDatabase()
     {
         flightsDb = new HashMap <>();
@@ -34,5 +36,4 @@ public class FlightDatabase {
         }
         return rows;
     }
-
 }
