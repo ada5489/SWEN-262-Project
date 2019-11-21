@@ -9,43 +9,31 @@ import java.util.List;
 
 public class FlightDatabase {
 
-    ArrayList <Flight> flightsDb;
+    HashMap <String, Flight> flightsDb;
 
 
 
     public FlightDatabase()
     {
-        flightsDb = new ArrayList <>();
+        flightsDb = new HashMap <>();
     }
 
     public Flight GetData(String flightID) {
-        return null;
+
+        return flightsDb.get(flightID);
     }
 
-    public Flight UpdateData(Flight flight) {
-        return null;
-    }
 
     public void AddFlight(Flight flight) {
-        flightsDb.add(flight);
-    }
-
-    public Flight DeleteData(Flight flight) {
-        return null;
+        flightsDb.put(flight.getFlightNumber(), flight);
     }
 
     public List<List <String>> ToList() {
         List <List<String>> rows = new ArrayList <>();
-        for (Flight flight : flightsDb)
+        for (Flight flight : flightsDb.values())
         {
             rows.add(flight.toArray());
         }
         return rows;
-    }
-
-
-    public void clear()
-    {
-        flightsDb = new ArrayList <>();
     }
 }

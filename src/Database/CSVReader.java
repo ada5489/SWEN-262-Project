@@ -3,7 +3,6 @@ package Database;
 import Model.Airport;
 import Model.Flight;
 import java.io.*;
-import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
 
@@ -11,15 +10,6 @@ import java.util.Scanner;
 public class CSVReader {
     private static AirportDatabase aDB = new AirportDatabase();
     private static FlightDatabase fDB = new FlightDatabase();
-//    private static FileWriter csvWriter;
-//
-//    static {
-//        try {
-//            csvWriter = new FileWriter("data/AFRS.csv");
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
-//    }
 
     public static void read_text(String filename) throws IOException {
         String[] line;
