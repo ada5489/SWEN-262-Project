@@ -44,8 +44,4 @@ public class FlightDatabase {
     }
 
 
-    public void clear()
-    {
-        flightsDb = new ArrayList <>();
-    }
 }
