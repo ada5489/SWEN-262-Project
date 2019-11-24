@@ -1,4 +1,4 @@
-package Model;
+package Database;
 
 import Database.AirportDatabase;
 import Database.FlightDatabase;
@@ -16,7 +16,7 @@ public class DataBaseManager {
   }
 
 
-  
+
   public AirportDatabase getAdb()
   {
     return adb;
