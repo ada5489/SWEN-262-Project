@@ -1,6 +1,7 @@
 package Database;
 
 import Model.Airport;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -29,9 +30,9 @@ public class AirportDatabase {
         airportsDb.get(airportcode).addWeather(wName,temp);
     }
 
-    public Weather getWeather(String airport_code){
+    public String getWeather(String airport_code){
 	this.timesCalled++;
-	return airportsDb.get(airport_code).getWeather();
+	return airportsDb.get(airport_code).getWeather(timesCalled);
     }
 
     public void AddData(Airport airport) {

@@ -49,8 +49,8 @@ public class Airport {
         weathers.add(new Weather(name,temp));
     }
 
-    public ArrayList<Weather> getWeather(int count){
-	return weathers.get(count % (weathers.size() - 1));
+    public String getWeather(int count){
+	return weathers.get(count % (weathers.size() - 1)).toString();
     }
 
     public void setDelaytime(String delaytime) {

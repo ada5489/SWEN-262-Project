@@ -6,8 +6,6 @@ import Model.Flight;
 import Model.FlightInterface;
 import Model.Itinerary;
 import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.Set;
 
 public class GenerateItenaries {
     private FlightDatabase fDB;
@@ -56,5 +54,10 @@ public class GenerateItenaries {
             }
         }
         return itenaries;
+    }
+
+    public void generator()
+    {
+
     }
 }

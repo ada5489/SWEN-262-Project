@@ -65,12 +65,12 @@ public class Itinerary implements FlightInterface{
    * @return a string of the flight numbers
    */
   public String getFlightNumber(){
-    String str = "";
+    StringBuilder str = new StringBuilder();
     for (FlightInterface fs :
         flights) {
-      str += fs.getFlightNumber() + ",";
+      str.append(fs.getFlightNumber()).append(",");
     }
-    return str;
+    return str.toString();
   }
 
   /**

@@ -1,6 +1,6 @@
 package RequestResponse;
 
-public class QueryResponse implements Response {
+class QueryResponse implements Response {
 
   @Override
   public String outputData() {
