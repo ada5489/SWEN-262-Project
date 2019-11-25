@@ -19,10 +19,8 @@ public class FlightDatabase {
     }
 
     public Flight GetData(String flightID) {
-
         return flightsDb.get(flightID);
     }
-
 
     public void AddFlight(Flight flight) {
         flightsDb.put(flight.getFlightNumber(), flight);
@@ -35,5 +33,18 @@ public class FlightDatabase {
             rows.add(flight.toArray());
         }
         return rows;
+    }
+
+    public ArrayList<Flight> getAirportFlights(String AirportCode)
+    {
+        ArrayList<Flight> flights = new ArrayList <>();
+        for(Flight f : flightsDb.values())
+        {
+            if (f.getOrigin().equals(AirportCode))
+            {
+                flights.add(f);
+            }
+        }
+        return flights;
     }
 }

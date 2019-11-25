@@ -2,6 +2,8 @@ package Database;
 
 import Model.Airport;
 import Model.Flight;
+import RequestResponse.GenerateItenaries;
+
 import java.io.*;
 import java.util.List;
 import java.util.Scanner;
@@ -45,7 +47,7 @@ public class CSVReader {
         }
     }
 
-    public static void readCsv() throws IOException {
+    public static GenerateItenaries readCsv() throws IOException {
         Scanner csvReader = new Scanner(new FileReader("data/AFRS.csv"));
         String l = csvReader.nextLine();
         String[] line = l.split("/");
@@ -81,7 +83,7 @@ public class CSVReader {
                 }
                 break;
         }
-        System.out.println("Completed");
+        return new GenerateItenaries(fDB,aDB);
     }
 
     public static void writeCsv() throws IOException

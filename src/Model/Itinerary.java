@@ -83,5 +83,16 @@ public class Itinerary implements FlightInterface{
     return getFlightNumber().equals(itinerary.getFlightNumber());
   }
 
+  public String toString()
+  {
+    StringBuilder s = new StringBuilder();
+    s.append("Flight Itinerary = FLights: ");
+    for (FlightInterface f : flights)
+    {
+      s.append(f.getFlightNumber()).append(", ");
+    }
+    return s.toString();
+  }
+
 
 }
