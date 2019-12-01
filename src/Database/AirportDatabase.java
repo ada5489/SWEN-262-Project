@@ -8,10 +8,12 @@ import java.util.List;
 public class AirportDatabase {
 
     HashMap<String,Airport> airportsDb;
+    private int timesCalled;
 
     public AirportDatabase()
     {
         airportsDb = new HashMap <>();
+	this.timesCalled = 0;
     }
 
     public void setConnection(String airportcode, String time) {
@@ -25,6 +27,11 @@ public class AirportDatabase {
     public void setWeather(String airportcode, String wName, String temp)
     {
         airportsDb.get(airportcode).addWeather(wName,temp);
+    }
+
+    public Weather getWeather(String airport_code){
+	this.timesCalled++;
+	return airportsDb.get(airport_code).getWeather();
     }
 
     public void AddData(Airport airport) {
