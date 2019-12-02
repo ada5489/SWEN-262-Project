@@ -3,6 +3,7 @@ package Database;
 import Database.AirportDatabase;
 import Database.FlightDatabase;
 import Model.Itinerary;
+import Model.Reservation;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -41,19 +42,37 @@ public class DataBaseManager {
   }
 
   /**
-   * the delegated
-   * @param name
-   * @param it
+   * overload of makeReservation uses the actual itinerary method
+   * @param name passenger
+   * @param it itinerary
    * @return
    */
   public boolean makeReservation(String name, Itinerary it){
     return rdb.createReservation(name,it);
   }
 
+  /**
+   * Facade entry point for deletion of a reservation.
+   * @param passenger passenger name
+   * @param origin origin name code
+   * @param dest destination code
+   * @return true if it was a successful deletion, false if it was not found or unsuccessful
+   */
+  public boolean deleteReservation(String passenger, String origin, String dest){
+    return rdb.deleteReservation(passenger,origin,dest);
+  }
 
-
-
-
+  /**
+   * for the retrieve command
+   * @param name the name of the passenger
+   * @param origin the origin code airport
+   * @param dest the destination is exceptable to pass it EMPTY STRINGS if no optional args were given
+   * @return the list of found reservations matching the query
+   */
+  public List<Reservation> findReservations(String name, String origin, String dest){
+    return rdb.findReservation(name,origin,dest);
+  }
+  //end Reservation database methods for the facade
 
 
 
