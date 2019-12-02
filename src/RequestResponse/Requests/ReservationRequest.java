@@ -1,6 +1,8 @@
-package RequestResponse;
+package RequestResponse.Requests;
 
 import Model.Itinerary;
+import RequestResponse.Requests.Request;
+import RequestResponse.Responses.Response;
 
 /**
  * Adds a flight reservation is subject to change name.

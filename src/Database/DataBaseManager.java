@@ -16,6 +16,11 @@ public class DataBaseManager {
   private List<Itinerary> itineraries; //this is the list of returned itineraries when prompted
 
 
+  public DataBaseManager(){
+    this.rdb = new ReservationDatabase();
+    this.adb = new AirportDatabase();
+    this.fdb = new FlightDatabase();
+  }
   public DataBaseManager(AirportDatabase abd,FlightDatabase fdb, ReservationDatabase rdb ){
     this.adb = abd;
     this.fdb = fdb;

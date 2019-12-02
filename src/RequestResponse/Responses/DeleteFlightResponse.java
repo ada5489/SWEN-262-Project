@@ -1,4 +1,4 @@
-package RequestResponse;
+package RequestResponse.Responses;
 
 public class DeleteFlightResponse implements Response {
 

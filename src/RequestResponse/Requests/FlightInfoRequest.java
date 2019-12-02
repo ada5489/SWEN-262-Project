@@ -1,4 +1,6 @@
-package RequestResponse;
+package RequestResponse.Requests;
+
+import RequestResponse.Responses.Response;
 
 public class FlightInfoRequest implements Request {
 

@@ -1,7 +1,8 @@
-package RequestResponse;
+package RequestResponse.Responses;
 
 
 import Model.Itinerary;
+import RequestResponse.Responses.Response;
 
 public class ReservationResponse implements Response {
 
