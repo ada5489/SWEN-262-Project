@@ -4,12 +4,17 @@ import Model.Flight;
 import Model.FlightInterface;
 import Model.Itinerary;
 import Model.Reservation;
+import RequestResponse.ReservationRequest;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import javax.print.DocFlavor.STRING;
 
+/**
+ * stores writes and saves databases
+ *
+ */
 public class ReservationDatabase {
   private List<Reservation> reservations;
   private HashMap<String, List<Reservation>> userReservations; //might just do the list. can add for more efficency
@@ -59,6 +64,27 @@ public class ReservationDatabase {
     }
     return false;
   }
+
+  /**
+   * method used for if all necessary parameters are needed. 
+   * @param name the name
+   * @param origin the origin airport code
+   * @param dest the destination airport code
+   * @return the confirmed reservation that person has made 
+   */
+  public List<Reservation> findReservation(String name, String origin, String dest){
+    List confirmed = new ArrayList<Reservation>();
+    for (Reservation r :
+        reservations) {
+        if (!r.getPassengerName().equals(name)) { continue; }
+        if (!origin.isEmpty() && !r.getOrigin().equals(origin)) { continue; }
+        if (!dest.isEmpty() && !r.getDestination().equals(dest)) { continue; }
+        confirmed.add(r);
+      }
+    return confirmed;
+  }
+
+
 
   /**
    * private initialization method;
@@ -133,6 +159,9 @@ public class ReservationDatabase {
         {"100", "SFO", "LAS", "6:50p", "8:36p", "66"},
         {"100", "SFO", "LAS", "6:50p", "8:36p", "66", "101", "ATL", "MCO", "10:18p", "11:45p","93"}
     };
+    String parsingTest = "paul,287,PIT,JFK,11:35a,12:57p,164";
+    String returnFlightTest ="paul,287,PIT,JFK,11:35a,12:57p,164,283,JFK,PIT,9:35a,11:00a,164";
+
     for (String[] flightTests :
         flightTest) {
       for (FlightInterface f:
@@ -140,6 +169,14 @@ public class ReservationDatabase {
         System.out.println(f.toString());
       }
     }
+    ReservationDatabase rDB = new ReservationDatabase();
+    ArrayList<Reservation> ls = new ArrayList(rDB.findReservation("paul", "JFK", "PIT"));
+    for (Reservation r :
+        ls) {
+      System.out.println(r.getPassengerName() + " " + r.getItinerary());
+    }
+
+
   }
 
 

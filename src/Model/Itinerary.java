@@ -1,5 +1,6 @@
 package Model;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -105,9 +106,19 @@ public class Itinerary implements FlightInterface{
     String str = "";
     str += "Flight Numbers: "  + getFlightNumber() + " Leaving from " + getOrigin() +
           " At time:" + getDepartureTime() + " Arriving finally at airport: " + getDestination()
-            + " at Time:" + getArrivalTime() + " Costing a total of " + getAirfare();
+            + " at Time:" + getArrivalTime() + " Costing a total of " + getAirfare() +"$";
 
     return str;
+
+  }
+  public static void main(String[] args){
+    FlightInterface guy = new Flight("287", "JFK", "PIT", "12","11", "164");
+    FlightInterface guy2 = new Flight("288", "PIT", "JFK", "12:01a","11:02p", "164");
+    List flights = new ArrayList();
+    flights.add(guy);
+    flights.add(guy2);
+    Itinerary it = new Itinerary(flights);
+    System.out.println(it);
 
   }
 
