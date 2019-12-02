@@ -44,9 +44,20 @@ public class ReservationDatabase {
       }
     Reservation newRes = new Reservation(it, name);
     reservations.add(newRes);
-    //todo save the reservation db
     saveReservations();
     return true;
+  }
+
+  public boolean deleteReservation(String name, String origen, String dest){
+
+    for (int i = 0; i < reservations.size(); i++) {
+      if (reservations.get(i).isSameReservation(name,origen,dest)){
+        reservations.remove(i);
+        saveReservations();
+        return true;
+      }
+    }
+    return false;
   }
 
   /**
