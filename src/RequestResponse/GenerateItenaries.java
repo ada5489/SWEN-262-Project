@@ -2,62 +2,57 @@ package RequestResponse;
 
 import Database.AirportDatabase;
 import Database.FlightDatabase;
-import Model.Flight;
-import Model.FlightInterface;
-import Model.Itinerary;
+import Model.*;
+
 import java.util.ArrayList;
+import java.util.stream.Collectors;
 
 public class GenerateItenaries {
     private FlightDatabase fDB;
     private AirportDatabase aDB;
+    private TimeComparator TimeComparator;
 
     public GenerateItenaries(FlightDatabase fDB, AirportDatabase aDB)
     {
         this.fDB = fDB;
         this.aDB = aDB;
+        TimeComparator = new TimeComparator();
     }
 
-    public ArrayList<Itinerary> itineraries(String deptCode, String arrCode)
+    public ArrayList<Itinerary> itineraries(String deptCode, String arrCode, int Connections)
     {
-        int num = 0;
-        ArrayList<Itinerary> itenaries = new ArrayList <>();
-        for(Flight f : fDB.getAirportFlights(deptCode))
-        {
-            ArrayList<FlightInterface> flights = new ArrayList <>();
-            flights.add(f);
-            while(num < 2)
-            {
-                if(f.getDestination().equals(arrCode) && flights.size() == 0)
+        ArrayList<Itinerary> itineraries = new ArrayList <>();
+        switch (Connections){
+            case 0:
+                for(FlightInterface f : fDB.getFlights(deptCode,arrCode))
                 {
-                    itenaries.add(new Itinerary(flights));
-                    break;
+
+                    itineraries.add(new Itinerary(f));
                 }
-                else if (f.getDestination().equals(arrCode) && flights.size() != 0) {
-                    flights.add(f);
-                    itenaries.add(new Itinerary(flights));
-                    break;
-                }
-                else {
-                    for (Flight f1 : fDB.getAirportFlights(f.getDestination())) {
-                        f = f1;
-                        break;
+                return itineraries;
+            case 1:
+                ArrayList<FlightInterface> flights = new ArrayList <>();
+                ArrayList<String> list = (ArrayList <String>) aDB.getAirport(deptCode).neighbourList().stream().filter(
+                        aDB.getAirport(arrCode).neighbourList()::contains).collect(Collectors.toList());
+                if (!list.isEmpty())
+                {
+                    for (String s : list) {
+                        for (FlightInterface f : fDB.getFlights(deptCode, s))
+                        {
+                            for(FlightInterface f1: fDB.getFlights(s, arrCode))
+                            {
+                                if(TimeComparator.compare(f.getArrivalTime(), f1.getDepartureTime()) > 0)
+                                {
+                                    flights.add(f);
+                                    flights.add(f1);
+                                    itineraries.add(new Itinerary(flights));
+                                    flights = new ArrayList <>();
+                                }
+                            }
+                        }
                     }
-                    num ++;
                 }
-            }
         }
-        for (Itinerary i : itenaries)
-        {
-            if (!i.getDestination().equals(arrCode))
-            {
-                itenaries.remove(i);
-            }
-        }
-        return itenaries;
-    }
-
-    public void generator()
-    {
-
+        return itineraries;
     }
 }

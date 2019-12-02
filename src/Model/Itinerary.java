@@ -1,5 +1,6 @@
 package Model;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -9,9 +10,15 @@ import java.util.List;
  */
 public class Itinerary implements FlightInterface{
 
-  private List<FlightInterface> flights;
+  private ArrayList<FlightInterface> flights;
 
-  public Itinerary(List<FlightInterface> flights){
+  public Itinerary(FlightInterface flight)
+  {
+    flights = new ArrayList <>();
+    flights.add(flight);
+  }
+
+  public Itinerary(ArrayList<FlightInterface> flights){
     this.flights = flights;
   }
   /**
@@ -24,6 +31,11 @@ public class Itinerary implements FlightInterface{
         totalAirFare+= fs.getAirfare();
     }
     return totalAirFare;
+  }
+
+  public int flightSize()
+  {
+    return flights.size();
   }
 
 
@@ -93,6 +105,5 @@ public class Itinerary implements FlightInterface{
     }
     return s.toString();
   }
-
 
 }

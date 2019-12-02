@@ -35,6 +35,16 @@ public class AirportDatabase {
 	return airportsDb.get(airport_code).getWeather(timesCalled);
     }
 
+    public Airport getAirport(String airportCode)
+    {
+        return airportsDb.get(airportCode);
+    }
+
+    public void updateAirport(String code, String neighbor)
+    {
+        airportsDb.get(code).addNeighbour(neighbor);
+    }
+
     public void AddData(Airport airport) {
          airportsDb.put(airport.getAirportcode(), airport);
     }

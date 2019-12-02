@@ -1,4 +1,5 @@
 import Database.CSVReader;
+import Model.Itinerary;
 import RequestResponse.GenerateItenaries;
 
 import java.io.IOException;
@@ -16,11 +17,15 @@ public class Client {
     public static void main(String[] args) throws IOException {
         startDatabase();
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter Departure Airport and Arrival airport separated by a comma");
+        System.out.println("Enter Departure Airport , Arrival airport and Number of connections separated by a comma ");
         String input = scanner.next();
         System.out.println("The inputs are: " + input);
         String[] l = input.split(",");
-        System.out.println(itenaries.itineraries(l[0], l[1]).toString());
+        int num = Integer.parseInt(l[2]);
+        for (Itinerary i : itenaries.itineraries(l[0], l[1], num))
+        {
+            System.out.println(i.toString());
+        }
 
     }
 }

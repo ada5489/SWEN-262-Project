@@ -84,4 +84,10 @@ public class Flight implements FlightInterface {
   }
 
 
+  public String toString()
+  {
+    return origin + "," + destination;
+  }
+
+
 }

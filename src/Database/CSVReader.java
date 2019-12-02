@@ -78,6 +78,7 @@ public class CSVReader {
                 while(csvReader.hasNext()) {
                     if (line[1] != null && !line[0].isEmpty()) {
                         fDB.AddFlight(new Flight(line[0], line[1], line[2], line[3], line[4], line[5]));
+                        aDB.updateAirport(line[1],line[2]);
                     }
                     line = csvReader.nextLine().split("/");
                 }

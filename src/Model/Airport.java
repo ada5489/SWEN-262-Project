@@ -1,9 +1,7 @@
 package Model;
 
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 
 class Weather{
     private String name;
@@ -26,6 +24,7 @@ public class Airport {
     private int Delaytime;
     private int ConnectionTime;
     private String airportcode;
+    private HashSet <String> neighbours;
 
     public Airport(String code, String name, String Delaytime, String ConnectionTime, String wea )
     {
@@ -34,6 +33,7 @@ public class Airport {
         weathers = new ArrayList <>();
         this.Delaytime = Integer.parseInt(Delaytime);
         this.ConnectionTime = Integer.parseInt(ConnectionTime);
+        neighbours = new HashSet <>();
         parseWeather(wea);
 
     }
@@ -76,6 +76,24 @@ public class Airport {
             weathers.add(new Weather(weath[0],weath[1]));
                 }
         }
+    }
+
+    public void addNeighbour(String code)
+    {
+        if(!neighbours.contains(code))
+        {
+            neighbours.add(code);
+        }
+    }
+
+    public boolean hasNeighbour(String airportcode)
+    {
+        return neighbours.contains(airportcode);
+    }
+
+    public HashSet<String> neighbourList()
+    {
+        return neighbours;
     }
 
     public List<String> toArray()
