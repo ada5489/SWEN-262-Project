@@ -8,6 +8,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
+import javax.print.DocFlavor.STRING;
 
 public class ReservationDatabase {
   private List<Reservation> reservations;
@@ -20,15 +21,12 @@ public class ReservationDatabase {
   }
 
 
-
-  public void readInReservations(){
-    userReservations = new HashMap<>();
-
-
-
-    //CSVREADER reading in the list to populate the private data
-
-
+  /**
+   * reads in reservation at given hardcoded filename
+   */
+  private void readInReservations(){
+    reservations = new ArrayList<>();
+    fullFileReadIn();
   }
 
   /**
@@ -46,7 +44,22 @@ public class ReservationDatabase {
       }
     Reservation newRes = new Reservation(it, name);
     reservations.add(newRes);
+    //todo save the reservation db
+    saveReservations();
     return true;
+  }
+
+  /**
+   * private initialization method;
+   */
+  private void fullFileReadIn(){
+    CSVReader read = new CSVReader();
+    ArrayList<String> list = read.readListFromFile(fileName);
+    for (String line :
+        list) {
+      reservations.add(makeReservation(line));
+    }
+
   }
 
   /**
@@ -55,14 +68,12 @@ public class ReservationDatabase {
    * @param stringLineFromFile the line from the flat storage file
    * @return a reservation
    */
-  public Reservation makeReservation(String stringLineFromFile){
+  private Reservation makeReservation(String stringLineFromFile){
     String[] vals = stringLineFromFile.split(",");
     String name = vals[0];
     String[] flights = Arrays.copyOfRange(vals,1,vals.length);
     Itinerary it = new Itinerary(partitionFlightsFromString(flights));
-    Reservation reservation = new Reservation(it,name);
-    return reservation;
-    //Reservation res = new Reservation()
+    return new Reservation(it,name);
   }
 
   /**
@@ -86,7 +97,20 @@ public class ReservationDatabase {
       itinerary.add(fl);
     }
     return itinerary;
+  }
 
+  /**
+   * saves the reservations across builds
+   */
+  private void saveReservations(){
+    CSVReader reader = new CSVReader();
+    String str = "";
+    for (Reservation res :
+        reservations) {
+      str= str + res.getPassengerName() +"," + res.getItinerary().toCSV();
+      str += "\n";
+    }
+    reader.writeStringToFile(fileName,str);
   }
 
   public static void main(String[] args){
@@ -103,9 +127,7 @@ public class ReservationDatabase {
       for (FlightInterface f:
       partitionFlightsFromString(flightTests)) {
         System.out.println(f.toString());
-
       }
-
     }
   }
 

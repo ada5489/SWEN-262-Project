@@ -3,6 +3,7 @@ package Database;
 import Model.Airport;
 import Model.Flight;
 import java.io.*;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
@@ -10,7 +11,9 @@ import java.util.Scanner;
 public class CSVReader {
     private static AirportDatabase aDB = new AirportDatabase();
     private static FlightDatabase fDB = new FlightDatabase();
+    public CSVReader(){
 
+    }
     public static void read_text(String filename) throws IOException {
         String[] line;
         RandomAccessFile file = new RandomAccessFile(filename, "r");
@@ -131,5 +134,41 @@ public class CSVReader {
         csvWriter.flush();
         csvWriter.close();
 
+    }
+
+    /**
+     * Reads in a list from a given file
+     * @param fileName the file name in which to read
+     * @return an arraylist of strings to be parsed and sent to the correct database
+     */
+    public ArrayList<String> readListFromFile(String fileName){
+        ArrayList<String> list = new ArrayList<>();
+        try {
+            Scanner scanner = new Scanner(new File(fileName));
+            while(scanner.hasNext()){
+                String str = scanner.nextLine();
+                if (!str.isEmpty())
+                 list.add(str);
+            }
+        } catch (FileNotFoundException e) {
+            return new ArrayList<>();
+        }
+        return list;
+    }
+
+    /**
+     * writes a massive string to the specified storage file
+     * @param StorageFileName storage file name
+     * @param data the data string in its complete form
+     */
+    public boolean writeStringToFile(String StorageFileName, String data){
+        try {
+            BufferedWriter writer = new BufferedWriter(new FileWriter(StorageFileName));
+            writer.write(data);
+            writer.close();
+            return true;
+        } catch (IOException e){
+            return false;
+        }
     }
 }

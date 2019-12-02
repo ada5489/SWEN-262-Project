@@ -79,10 +79,11 @@ public class Itinerary implements FlightInterface{
    * If the itinerary objects share the same flightnumbers the itinerary's are equal
    * more suited to check to see if reservations or something simmilar is the same
    * @param itinerary itinerary to be checked
-   * @return
+   * @return if the itineraries start and end at the same spot
    */
   public boolean equals(Itinerary itinerary){
-    return getFlightNumber().equals(itinerary.getFlightNumber());
+    return getOrigin().equals(itinerary.getOrigin()) &&
+            getDestination().equals(itinerary.getDestination());
   }
   public String toCSV(){
     String str = "";
