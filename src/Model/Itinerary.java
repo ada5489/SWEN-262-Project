@@ -10,9 +10,11 @@ import java.util.List;
 public class Itinerary implements FlightInterface{
 
   private List<FlightInterface> flights;
+  private int connections;
 
   public Itinerary(List<FlightInterface> flights){
     this.flights = flights;
+    connections = flights.size();
   }
   /**
    * calculates the total airfare
@@ -81,6 +83,31 @@ public class Itinerary implements FlightInterface{
    */
   public boolean equals(Itinerary itinerary){
     return getFlightNumber().equals(itinerary.getFlightNumber());
+  }
+  public String toCSV(){
+    String str = "";
+    for (FlightInterface flight :
+        flights) {
+      str = flight.toCSV(); //make decision here to make it either one very large line per user or multilined and nicer
+      //str += "\n";
+
+    }
+    return str;
+  }
+
+  /**
+   * returns the correct displaying version of an itinerary with all the correct information
+   * in an easy and understandable package.
+   * @return
+   */
+  public String toString(){
+    String str = "";
+    str += "Flight Numbers: "  + getFlightNumber() + " Leaving from " + getOrigin() +
+          " At time:" + getDepartureTime() + " Arriving finally at airport: " + getDestination()
+            + " at Time:" + getArrivalTime() + " Costing a total of " + getAirfare();
+
+    return str;
+
   }
 
 

@@ -83,5 +83,19 @@ public class Flight implements FlightInterface {
     return Arrays.asList(strs);
   }
 
+  public String toCSV(){
+    String str = "";
+    str += flightNumber + "," + origin + "," + destination + "," + departureTime + "," + arrivalTime
+        + "," + airfare;
+    return str;
+  }
+  public String toString(){
+    String str = "";
+    str +=  "Flight Number :" + flightNumber + " Leaves From: " + origin + " Arrives at " + destination
+        + " At Boarding Time: " + departureTime + " Lands at Time: " + arrivalTime
+        + " For: " + airfare + "$";
+    return str;
+  }
+
 
 }

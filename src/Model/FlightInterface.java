@@ -38,4 +38,9 @@ public interface FlightInterface {
    */
   String getFlightNumber();
 
+  /*
+  makes the flight interface into a flat csv file
+   */
+  String toCSV();
+
 }

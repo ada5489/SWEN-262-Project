@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-class Weather{
+ class Weather{
     private String name;
     private String temperature;
     Weather(String name, String temperature)
@@ -49,8 +49,8 @@ public class Airport {
         weathers.add(new Weather(name,temp));
     }
 
-    public ArrayList<Weather> getWeather(int count){
-	return weathers.get(count % (weathers.size() - 1));
+    public Weather getWeather(int count){
+	  return weathers.get(count % (weathers.size() - 1));
     }
 
     public void setDelaytime(String delaytime) {
