@@ -8,11 +8,13 @@ public class DataBaseManager {
 
   private AirportDatabase adb;
   private FlightDatabase fdb;
+  private ReservationDatabase rdb;
 
 
-  public DataBaseManager(AirportDatabase abd,FlightDatabase fdb ){
+  public DataBaseManager(AirportDatabase abd,FlightDatabase fdb, ReservationDatabase rdb ){
     this.adb = abd;
     this.fdb = fdb;
+    this.rdb = rdb;
   }
 
 
@@ -26,4 +28,7 @@ public class DataBaseManager {
     return fdb;
   }
 
+  public ReservationDatabase getRdb() {
+    return rdb;
+  }
 }

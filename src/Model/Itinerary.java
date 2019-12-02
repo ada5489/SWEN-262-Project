@@ -86,12 +86,18 @@ public class Itinerary implements FlightInterface{
     return getOrigin().equals(itinerary.getOrigin()) &&
             getDestination().equals(itinerary.getDestination());
   }
+
+  /**
+   * returns the properly formatted return string for file storage
+   * @return
+   */
   public String toCSV(){
     String str = "";
-    for (FlightInterface flight :
-        flights) {
-      str = flight.toCSV(); //make decision here to make it either one very large line per user or multilined and nicer
-      //str += "\n";
+    for (int i = 0; i < flights.size(); i++) {
+      FlightInterface flight = flights.get(i);
+      if (i != flights.size()-1)
+      str += flight.toCSV()+",";
+      else str += flight.toCSV();
 
     }
     return str;

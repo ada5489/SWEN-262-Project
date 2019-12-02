@@ -9,7 +9,6 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
-import javax.print.DocFlavor.STRING;
 
 /**
  * stores writes and saves databases
@@ -117,7 +116,7 @@ public class ReservationDatabase {
    * this method takes in a string array of itinerary only not the person
    * Does not connect it to a passenger for a reservation.
    * It gets the itinerary of a single passenger.
-   * @param flightPieces the coppy of parsed array in the
+   * @param flightPieces the copy of parsed array in the
    * @return a List of FlightInterFaces to be made into an itinerary
    */
   public static ArrayList<FlightInterface> partitionFlightsFromString(String[] flightPieces){
@@ -150,34 +149,47 @@ public class ReservationDatabase {
     reader.writeStringToFile(fileName,str);
   }
 
-  public static void main(String[] args){
-    //SFO,LAS,6:50p,8:26p,100,66
-    //SFO,LAS,6:50p,8:26p,100,66,LAX,LAS,9:45p,11:02p,113,96
-    //100/SFO/LAS/6:50p/8:26p/66
-    //101/ATL/MCO/10:18p/11:45p/93
-    String[][] flightTest = {
-        {"100", "SFO", "LAS", "6:50p", "8:36p", "66"},
-        {"100", "SFO", "LAS", "6:50p", "8:36p", "66", "101", "ATL", "MCO", "10:18p", "11:45p","93"}
-    };
-    String parsingTest = "paul,287,PIT,JFK,11:35a,12:57p,164";
-    String returnFlightTest ="paul,287,PIT,JFK,11:35a,12:57p,164,283,JFK,PIT,9:35a,11:00a,164";
+//  public static void main(String[] args){
+//    //SFO,LAS,6:50p,8:26p,100,66
+//    //SFO,LAS,6:50p,8:26p,100,66,LAX,LAS,9:45p,11:02p,113,96
+//    //100/SFO/LAS/6:50p/8:26p/66
+//    //101/ATL/MCO/10:18p/11:45p/93
+//    String[][] flightTest = {
+//        {"100", "SFO", "LAS", "6:50p", "8:36p", "66"},
+//        {"100", "SFO", "LAS", "6:50p", "8:36p", "66", "101", "ATL", "MCO", "10:18p", "11:45p","93"}
+//    };
+//    String parsingTest = "paul,287,PIT,JFK,11:35a,12:57p,164";
+//    String returnFlightTest ="paul,287,PIT,JFK,11:35a,12:57p,164,283,JFK,PIT,9:35a,11:00a,164";
+//    FlightInterface guy = new Flight("287", "JFK", "PIT", "12","11", "164");
+//    FlightInterface guy2 = new Flight("288", "PIT", "JFK", "12:01a","11:02p", "164");
+//     FlightInterface guy3 = new Flight("289", "JFK", "LOG", "1:00p", "12:00a", "98");
+//    List flights = new ArrayList();
+//    flights.add(guy);
+//    flights.add(guy2);
+//    flights.add(guy3);
+//    Itinerary it = new Itinerary(flights);
+//    System.out.println(it);
+//
+//
+////    for (String[] flightTests :
+////        flightTest) {
+////      for (FlightInterface f:
+////      partitionFlightsFromString(flightTests)) {
+////        System.out.println(f.toString());
+////      }
+////    }
+//    ReservationDatabase rDB = new ReservationDatabase();
+//    ArrayList<Reservation> ls = new ArrayList(rDB.findReservation("paul", "JFK", "PIT"));
+//
+//    rDB.createReservation("paul",it);
+//    rDB.deleteReservation("paul", "JFK", "JFK");
+//    for (Reservation r :
+//        ls) {
+//      System.out.println(r.getPassengerName() + " " + r.getItinerary());
+//    }
 
-    for (String[] flightTests :
-        flightTest) {
-      for (FlightInterface f:
-      partitionFlightsFromString(flightTests)) {
-        System.out.println(f.toString());
-      }
-    }
-    ReservationDatabase rDB = new ReservationDatabase();
-    ArrayList<Reservation> ls = new ArrayList(rDB.findReservation("paul", "JFK", "PIT"));
-    for (Reservation r :
-        ls) {
-      System.out.println(r.getPassengerName() + " " + r.getItinerary());
-    }
 
-
-  }
+//  }
 
 
 
