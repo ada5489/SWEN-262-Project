@@ -1,55 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="26788487-eb75-4f79-ba85-35ab6275e1f0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/SWEN-262-Project/Model/TimeComparator.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/SWEN-262-Project/RequestResponse/GenerateItineraries.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/SWEN-262-Project/RequestResponse/QueryResponse.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Model/TimeComparator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/RequestResponse/AirportResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/RequestResponse/GenerateItineraries.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/RequestResponse/QueryRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SWEN-262-Project/Client.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SWEN-262-Project/Database/AirportDatabase.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SWEN-262-Project/Database/CSVReader.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SWEN-262-Project/Database/DataBaseManager.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SWEN-262-Project/Database/Database.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SWEN-262-Project/Database/FlightDatabase.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SWEN-262-Project/Database/ReservationDatabase.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SWEN-262-Project/Model/AirfareComparator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SWEN-262-Project/Model/Airport.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SWEN-262-Project/Model/ArrivalTimeComparator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SWEN-262-Project/Model/DestinationTimeComparator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SWEN-262-Project/Model/Flight.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SWEN-262-Project/Model/FlightInterface.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SWEN-262-Project/Model/Itinerary.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SWEN-262-Project/Model/Reservation.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SWEN-262-Project/Model/Time.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SWEN-262-Project/Model/Weather.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SWEN-262-Project/RequestResponse/DeleteFlightReservationRequest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SWEN-262-Project/RequestResponse/DeleteFlightResponse.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SWEN-262-Project/RequestResponse/FlightInfoRequest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SWEN-262-Project/RequestResponse/FlightInfoResponse.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SWEN-262-Project/RequestResponse/QueryRequest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SWEN-262-Project/RequestResponse/Request.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SWEN-262-Project/RequestResponse/ReservationRequest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SWEN-262-Project/RequestResponse/ReservationResponse.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SWEN-262-Project/RequestResponse/Response.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Database/AirportDatabase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Database/AirportDatabase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Database/CSVReader.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Database/CSVReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Database/CSVReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Database/FlightDatabase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Database/FlightDatabase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/Airport.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Airport.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/ArrivalTimeComparator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/ArrivalTimeComparator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/DestinationTimeComparator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/DestinationTimeComparator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/Flight.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Flight.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/Itinerary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Itinerary.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/Time.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Time.java" afterDir="false" />
+    <list default="true" id="921b5926-4b7d-419f-a07a-11a7995e4474" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/src/RequestResponse/Requests/ReservationRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RequestResponse/Requests/ReservationRequest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -64,104 +17,38 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Model/Itinerary.java">
+        <entry file="file://$PROJECT_DIR$/src/Model/Flight.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2210">
-              <caret line="136" column="28" selection-start-line="136" selection-start-column="28" selection-end-line="136" selection-end-column="28" />
-              <folding>
-                <element signature="e#1559#1560#0" expanded="true" />
-                <element signature="e#1622#1623#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/RequestResponse/AirportResponse.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/RequestResponse/QueryRequest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="40" lean-forward="true" selection-start-line="2" selection-start-column="40" selection-end-line="2" selection-end-column="40" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/UI/RequestParser.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Database/FlightDatabase.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1071">
-              <caret line="70" column="5" selection-start-line="70" selection-start-column="5" selection-end-line="70" selection-end-column="5" />
+            <state relative-caret-position="170">
+              <caret line="10" column="5" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#1676#1677#0" expanded="true" />
+                <element signature="e#1704#1705#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Database/CSVReader.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-918">
-              <caret line="35" column="24" selection-start-line="35" selection-start-column="24" selection-end-line="35" selection-end-column="24" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
+        <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Model/ArrivalTimeComparator.java">
+        <entry file="file://$PROJECT_DIR$/src/Model/AirfareComparator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Database/AirportDatabase.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-697">
-              <caret line="48" column="5" selection-start-line="48" selection-start-column="5" selection-end-line="48" selection-end-column="5" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Model/FlightInterface.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" column="9" selection-start-line="14" selection-start-column="9" selection-end-line="14" selection-end-column="9" />
+            <state relative-caret-position="306">
+              <caret line="18" column="16" lean-forward="true" selection-start-line="18" selection-start-column="16" selection-end-line="18" selection-end-column="16" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Model/DestinationTimeComparator.java">
+        <entry file="file://$PROJECT_DIR$/src/RequestResponse/Requests/ReservationRequest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+            <state relative-caret-position="460">
+              <caret line="34" column="1" lean-forward="true" selection-start-line="34" selection-start-column="1" selection-end-line="34" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -172,7 +59,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="Model" />
+        <entry key="$PROJECT_DIR$" value="ItenaryCreation" />
       </map>
     </option>
   </component>
@@ -185,6 +72,7 @@
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/RequestResponse/AirportResponse.java" />
         <option value="$PROJECT_DIR$/src/RequestResponse/QueryRequest.java" />
+        <option value="$PROJECT_DIR$/src/RequestResponse/Requests/ReservationRequest.java" />
       </list>
     </option>
   </component>
@@ -198,19 +86,12 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="SWEN-262-Project-2" type="b2602c69:ProjectViewProjectNode" />
               <item name="SWEN-262-Project-2" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SWEN-262-Project-2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SWEN-262-Project-2" type="462c0819:PsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="SWEN-262-Project-2" type="b2602c69:ProjectViewProjectNode" />
@@ -229,10 +110,18 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Model" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="SWEN-262-Project-2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SWEN-262-Project-2" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="RequestResponse" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -302,8 +191,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49910232" visible="true" weight="0.2" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49910232" visible="true" weight="0.2" />
       <window_info id="Structure" order="1" sideWeight="0.50089765" side_tool="true" weight="0.24964234" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -320,9 +210,9 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" sideWeight="0.49947917" weight="0.32984293" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.4985694" visible="true" weight="0.36480686" />
+      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.4985694" weight="0.36480686" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50143063" side_tool="true" weight="0.32891566" />
-      <window_info anchor="bottom" id="Messages" order="12" weight="0.32771084" />
+      <window_info active="true" anchor="bottom" id="Messages" order="12" visible="true" weight="0.32725322" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -375,7 +265,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="Started to begin work on getting the connections requirement to work.&#10;After this it is to make them be able to the get itinerary's with&#10;connections. Which is quite the code to be able to do." />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-9.0.4.jdk/Contents/Home/lib/src.zip!/java.base/java/lang/String.java" />
     <entry file="file://$PROJECT_DIR$/data/weather.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -471,17 +360,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Model/AirfareComparator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="2" selection-start-line="6" selection-start-column="2" selection-end-line="12" selection-end-column="5" />
+        <state relative-caret-position="306">
+          <caret line="18" column="16" lean-forward="true" selection-start-line="18" selection-start-column="16" selection-end-line="18" selection-end-column="16" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1563">
-          <caret line="17" column="10" selection-start-line="17" selection-start-column="10" selection-end-line="17" selection-end-column="10" />
-        </state>
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Model/Reservation.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -526,8 +411,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Model/Flight.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1700">
-          <caret line="110" selection-start-line="110" selection-end-line="110" />
+        <state relative-caret-position="170">
+          <caret line="10" column="5" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1676#1677#0" expanded="true" />
@@ -623,6 +508,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/RequestResponse/Requests/ReservationRequest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="460">
+          <caret line="34" column="1" lean-forward="true" selection-start-line="34" selection-start-column="1" selection-end-line="34" selection-end-column="1" />
         </state>
       </provider>
     </entry>

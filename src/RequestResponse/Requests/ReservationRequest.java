@@ -2,6 +2,7 @@ package RequestResponse.Requests;
 
 import Model.Itinerary;
 import RequestResponse.Requests.Request;
+import RequestResponse.Responses.ReservationResponse;
 import RequestResponse.Responses.Response;
 import Database.DataBaseManager;
 
