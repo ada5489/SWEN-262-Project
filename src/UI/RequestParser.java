@@ -16,11 +16,10 @@ public class RequestParser {
 
     public String invalidRequest = "Error, Unknown request type or command";
     private String partialRequest = null;
-n
+
     public RequestParser(){
 	dataBaseManager = new DataBaseManager();
     }
-
 
   /**
    * And Finally, to request information about a particular airport it is done:
