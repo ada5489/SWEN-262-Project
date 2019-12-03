@@ -16,7 +16,7 @@ public class RequestParser {
 
     public String invalidRequest = "Error, Unknown request type or command";
     private String partialRequest = null;
-n
+
     public RequestParser(){
 	dataBaseManager = new DataBaseManager();
     }
