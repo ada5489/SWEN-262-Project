@@ -19,6 +19,9 @@ public class ReservationDatabase {
   private String fileName = "data/reservation.txt";
 
 
+  /**
+   * Author Evan Nolan
+   */
   public ReservationDatabase(){
     readInReservations();
   }
