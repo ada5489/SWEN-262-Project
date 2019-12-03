@@ -36,7 +36,7 @@ public class RequestParser {
     }
     else {
       String airport = parts[1];
-      return new AirportInfoRequest(airport,DataBaseManager);
+     // return new AirportInfoRequest(airport,DataBaseManager);
 
     }
 //    return new AirportInfoRequest(dataBaseManager);
