@@ -1,7 +1,7 @@
 package Model;
 
 import java.util.ArrayList;
-import java.util.List;
+
 
 /**
  * A composite of flight interfaces treats many flights like
@@ -32,12 +32,6 @@ public class Itinerary implements FlightInterface{
     }
     return totalAirFare;
   }
-
-  public int flightSize()
-  {
-    return flights.size();
-  }
-
 
   /**
    * gets the arrival time of the last flight in the itinerary
@@ -95,14 +89,17 @@ public class Itinerary implements FlightInterface{
     return getFlightNumber().equals(itinerary.getFlightNumber());
   }
 
+
   public String toString()
   {
     StringBuilder s = new StringBuilder();
-    s.append("Flight Itinerary = FLights: ");
+    s.append("Flight Itinerary = Flights: ");
     for (FlightInterface f : flights)
     {
       s.append(f.getFlightNumber()).append(", ");
     }
+    s.append("Total Airfare: $");
+    s.append(getAirfare());
     return s.toString();
   }
 

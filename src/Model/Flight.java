@@ -77,13 +77,20 @@ public class Flight implements FlightInterface {
     return flightNumber;
   }
 
+  /**
+   * Writes flights to list of strings
+   * @return the flight as a list of strings
+   */
   public List<String> toArray()
   {
     String[] strs = {flightNumber, origin, destination, departureTime, arrivalTime, String.valueOf(airfare)};
     return Arrays.asList(strs);
   }
 
-
+  /**
+   * Converts flight to string
+   * @return flight as a string
+   */
   public String toString()
   {
     return origin + "," + destination;

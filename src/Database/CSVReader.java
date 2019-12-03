@@ -2,7 +2,7 @@ package Database;
 
 import Model.Airport;
 import Model.Flight;
-import RequestResponse.GenerateItenaries;
+import RequestResponse.GenerateItineraries;
 
 import java.io.*;
 import java.util.List;
@@ -13,6 +13,11 @@ public class CSVReader {
     private static AirportDatabase aDB = new AirportDatabase();
     private static FlightDatabase fDB = new FlightDatabase();
 
+    /**
+     * Reads the text files
+     * @param filename the test file being read
+     * @throws IOException
+     */
     public static void read_text(String filename) throws IOException {
         String[] line;
         RandomAccessFile file = new RandomAccessFile(filename, "r");
@@ -47,7 +52,12 @@ public class CSVReader {
         }
     }
 
-    public static GenerateItenaries readCsv() throws IOException {
+    /**
+     * Reads csv File
+     * @return Itinerary generation
+     * @throws IOException
+     */
+    public static GenerateItineraries readCsv() throws IOException {
         Scanner csvReader = new Scanner(new FileReader("data/AFRS.csv"));
         String l = csvReader.nextLine();
         String[] line = l.split("/");
@@ -84,9 +94,13 @@ public class CSVReader {
                 }
                 break;
         }
-        return new GenerateItenaries(fDB,aDB);
+        return new GenerateItineraries(fDB,aDB);
     }
 
+    /**
+     * Writes to csv file
+     * @throws IOException
+     */
     public static void writeCsv() throws IOException
     {
         FileWriter csvWriter = new FileWriter("data/AFRS.csv");
