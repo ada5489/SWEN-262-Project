@@ -2,6 +2,8 @@ package Database;
 
 import Model.Airport;
 import Model.Flight;
+import RequestResponse.GenerateItineraries;
+
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -11,9 +13,13 @@ import java.util.Scanner;
 public class CSVReader {
     private static AirportDatabase aDB = new AirportDatabase();
     private static FlightDatabase fDB = new FlightDatabase();
-    public CSVReader(){
+    public CSVReader(){}
 
-    }
+    /**
+     * Reads the text files
+     * @param filename the test file being read
+     * @throws IOException
+     */
     public static void read_text(String filename) throws IOException {
         String[] line;
         RandomAccessFile file = new RandomAccessFile(filename, "r");
@@ -48,7 +54,12 @@ public class CSVReader {
         }
     }
 
-    public static void readCsv() throws IOException {
+    /**
+     * Reads csv File
+     * @return Itinerary generation
+     * @throws IOException
+     */
+    public static GenerateItineraries readCsv() throws IOException {
         Scanner csvReader = new Scanner(new FileReader("data/AFRS.csv"));
         String l = csvReader.nextLine();
         String[] line = l.split("/");
@@ -79,14 +90,19 @@ public class CSVReader {
                 while(csvReader.hasNext()) {
                     if (line[1] != null && !line[0].isEmpty()) {
                         fDB.AddFlight(new Flight(line[0], line[1], line[2], line[3], line[4], line[5]));
+                        aDB.updateAirport(line[1],line[2]);
                     }
                     line = csvReader.nextLine().split("/");
                 }
                 break;
         }
-        System.out.println("Completed");
+        return new GenerateItineraries(fDB,aDB);
     }
 
+    /**
+     * Writes to csv file
+     * @throws IOException
+     */
     public static void writeCsv() throws IOException
     {
         FileWriter csvWriter = new FileWriter("data/AFRS.csv");
