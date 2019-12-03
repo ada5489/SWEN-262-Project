@@ -1,7 +1,6 @@
 package Model;
 
 import java.util.ArrayList;
-import java.util.List;
 
 /**
  * A composite of flight interfaces treats many flights like
@@ -10,10 +9,17 @@ import java.util.List;
  */
 public class Itinerary implements FlightInterface{
 
-  private List<FlightInterface> flights;
+  private ArrayList<FlightInterface> flights;
   private int connections;
 
-  public Itinerary(List<FlightInterface> flights){
+
+    public Itinerary(FlightInterface flight)
+  {
+    flights = new ArrayList <>();
+    flights.add(flight);
+  }
+
+  public Itinerary(ArrayList<FlightInterface> flights){
     this.flights = flights;
     connections = flights.size();
   }
@@ -28,7 +34,6 @@ public class Itinerary implements FlightInterface{
     }
     return totalAirFare;
   }
-
 
   /**
    * gets the arrival time of the last flight in the itinerary
@@ -68,12 +73,12 @@ public class Itinerary implements FlightInterface{
    * @return a string of the flight numbers
    */
   public String getFlightNumber(){
-    String str = "";
+    StringBuilder str = new StringBuilder();
     for (FlightInterface fs :
         flights) {
-      str += fs.getFlightNumber() + ",";
+      str.append(fs.getFlightNumber()).append(",");
     }
-    return str;
+    return str.toString();
   }
 
   /**
@@ -120,7 +125,7 @@ public class Itinerary implements FlightInterface{
   public static void main(String[] args){
     FlightInterface guy = new Flight("287", "JFK", "PIT", "12","11", "164");
     FlightInterface guy2 = new Flight("288", "PIT", "JFK", "12:01a","11:02p", "164");
-    List flights = new ArrayList();
+    ArrayList flights = new ArrayList();
     flights.add(guy);
     flights.add(guy2);
     Itinerary it = new Itinerary(flights);
@@ -128,5 +133,18 @@ public class Itinerary implements FlightInterface{
 
   }
 
+
+//  public String toString()
+//  {
+//    StringBuilder s = new StringBuilder();
+//    s.append("Flight Itinerary = Flights: ");
+//    for (FlightInterface f : flights)
+//    {
+//      s.append(f.getFlightNumber()).append(", ");
+//    }
+//    s.append("Total Airfare: $");
+//    s.append(getAirfare());
+//    return s.toString();
+//  }
 
 }

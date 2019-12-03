@@ -9,7 +9,10 @@ public class Time {
   private String stringRep;
   private int totalTime;
 
-
+  /**
+   * Creates time object
+   * @param timeRepresentation time in string form
+   */
   public Time(String timeRepresentation){
   stringRep = timeRepresentation;
   totalTime = convertTimeToMins(timeRepresentation);
@@ -54,8 +57,7 @@ public class Time {
   }
 
   public String toString(){
-    String str = getStringRep() + " in minutes is: " + getTotalTime();
-    return str;
+    return getStringRep() + " in minutes is: " + getTotalTime();
   }
 
 
