@@ -1,7 +1,7 @@
 package Model;
 import java.util.*;
 
-class Weather{
+ class Weather{
     private String name;
     private String temperature;
 
