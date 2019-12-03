@@ -1,5 +1,6 @@
 package Model;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -10,9 +11,11 @@ import java.util.List;
 public class Itinerary implements FlightInterface{
 
   private List<FlightInterface> flights;
+  private int connections;
 
   public Itinerary(List<FlightInterface> flights){
     this.flights = flights;
+    connections = flights.size();
   }
   /**
    * calculates the total airfare
@@ -77,10 +80,52 @@ public class Itinerary implements FlightInterface{
    * If the itinerary objects share the same flightnumbers the itinerary's are equal
    * more suited to check to see if reservations or something simmilar is the same
    * @param itinerary itinerary to be checked
-   * @return
+   * @return if the itineraries start and end at the same spot
    */
   public boolean equals(Itinerary itinerary){
-    return getFlightNumber().equals(itinerary.getFlightNumber());
+    return getOrigin().equals(itinerary.getOrigin()) &&
+            getDestination().equals(itinerary.getDestination());
+  }
+
+  /**
+   * returns the properly formatted return string for file storage
+   * @return
+   */
+  public String toCSV(){
+    String str = "";
+    for (int i = 0; i < flights.size(); i++) {
+      FlightInterface flight = flights.get(i);
+      if (i != flights.size()-1)
+      str += flight.toCSV()+",";
+      else str += flight.toCSV();
+
+    }
+    return str;
+  }
+
+  /**
+   * returns the correct displaying version of an itinerary with all the correct information
+   * in an easy and understandable package.
+   * @return
+   */
+  public String toString(){
+    String str = "";
+    str += "Flight Numbers: "  + getFlightNumber() + " Leaving from " + getOrigin() +
+          " At time:" + getDepartureTime() + " Arriving finally at airport: " + getDestination()
+            + " at Time:" + getArrivalTime() + " Costing a total of " + getAirfare() +"$";
+
+    return str;
+
+  }
+  public static void main(String[] args){
+    FlightInterface guy = new Flight("287", "JFK", "PIT", "12","11", "164");
+    FlightInterface guy2 = new Flight("288", "PIT", "JFK", "12:01a","11:02p", "164");
+    List flights = new ArrayList();
+    flights.add(guy);
+    flights.add(guy2);
+    Itinerary it = new Itinerary(flights);
+    System.out.println(it);
+
   }
 
 

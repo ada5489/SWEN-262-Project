@@ -45,6 +45,18 @@ public class Reservation {
   }
 
   /**
+   * returns if the reservation starts ends and is made by the same passenger
+   * @param name passenger name
+   * @param origen origin airport code
+   * @param dest destination airport code
+   * @return
+   */
+  public boolean isSameReservation(String name, String origen, String dest){
+    return this.getPassengerName().equals(name)
+        && this.getOrigin().equals(origen)
+        && this.getDestination().equals(dest);
+  }
+  /**
    * returns if two reservations are the same
    * @param passengerName the passenger name
    * @param itinerary the itinerary of the associated passenger
