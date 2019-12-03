@@ -1,6 +1,7 @@
 import Database.CSVReader;
 import Model.Itinerary;
 import RequestResponse.GenerateItineraries;
+import Database.DataBaseManager;
 
 import java.io.IOException;
 import java.util.Scanner;
@@ -9,10 +10,12 @@ public class Client {
 
     private static GenerateItineraries itenaries;
     private RequestParser parser;
+    private DatabaseManager db;
 
 
     private static void startDatabase() throws IOException {
         itenaries = CSVReader.readCsv();
+
 	
     }
 
