@@ -1,9 +1,9 @@
-package RequestResponse;
+package RequestResponse.Requests;
 
 import RequestResponse.Requests.Request;
 import RequestResponse.Responses.Response;
 
-class QueryRequest implements Request {
+public class QueryRequest implements Request {
 
   @Override
   public Response handle() {

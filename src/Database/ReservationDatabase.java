@@ -4,7 +4,6 @@ import Model.Flight;
 import Model.FlightInterface;
 import Model.Itinerary;
 import Model.Reservation;
-import RequestResponse.ReservationRequest;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
@@ -20,6 +19,9 @@ public class ReservationDatabase {
   private String fileName = "data/reservation.txt";
 
 
+  /**
+   * Author Evan Nolan
+   */
   public ReservationDatabase(){
     readInReservations();
   }
