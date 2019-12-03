@@ -11,8 +11,6 @@ import RequestResponse.Requests.AirportInfoRequest;
 public class RequestParser {
     private DataBaseManager dataBaseManager;
 
-    private CSVReader csvReader = new CSVReader();
-
 
     public String invalidRequest = "Error, Unknown request type or command";
     private String partialRequest = null;
@@ -28,7 +26,7 @@ public class RequestParser {
    * @param input the command and other part;
    * @return the airport info request and sends it off.
    */
-    public AirportInfoRequest airportInfoRequest(String input){
+    public void parse(String input){
 	String[] parts = input.split(",");
 	switch(parts[0]){
 	case "info":
